@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Voting</title>
+    </head>
+    <body>
+        
+        <input type="number" id ="wins"><br>
+        <input type="number" id ="draws"><br>
+        <input type="number" id ="losses">
+        <button id ="footballpoints" onClick="print()">Total</button>
+        <h3>Football Scores: <span id="result"></span></h3>
+        
+    <script>            
+            
+            function scores(){
+                var wins = parseInt(document.getElementById('wins').value),
+                    draws = parseInt(document.getElementById('draws').value)
+                    losses = parseInt(document.getElementById('losses').value);
+                   
+                    
+                    if (wins >=0 && draws>=0 && losses>=0){
+                    
+                        return (wins*3)+(draws*1)+(losses*0);
+                    }
+                    
+            }
+            function print(){
+                document.getElementById("result").innerText =scores();
+            }
+        </script>
+    </body>
+</html>
